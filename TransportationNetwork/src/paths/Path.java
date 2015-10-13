@@ -15,7 +15,8 @@ public class Path<T> extends Edge{
     public T allowedTypes;
     private byte lanes;
     
-    public Path(int numLanes, T allowed) {
+    public Path(int numLanes, T allowed, Node startNode, Node endNode) {
+        super(startNode,endNode);
         lanes = (byte)numLanes;
         allowedTypes = allowed;
     }

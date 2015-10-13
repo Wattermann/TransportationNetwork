@@ -6,6 +6,7 @@
 package routes;
 
 import java.util.List;
+import paths.Node;
 import paths.Path;
 import vehicles.*;
 
@@ -16,9 +17,10 @@ import vehicles.*;
 public class Road{
     MotorVehicle allowedTypes;
     List<Path> pathList;
-    public Road () {
-        Path path1 = new Path(1, allowedTypes);
-        Path path2 = new Path(1, allowedTypes);
+    
+    public Road (Node startNode, Node endNode) {
+        Path path1 = new Path(1, allowedTypes, startNode, endNode);
+        Path path2 = new Path(1, allowedTypes, endNode, startNode);
         pathList.add(path1);
         pathList.add(path2);
     }

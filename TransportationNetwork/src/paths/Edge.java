@@ -13,6 +13,11 @@ public class Edge {
     private int weight;
     public Node startNode,endNode;
     
+    public Edge(Node start, Node end) {
+        this.startNode = start;
+        this.endNode = end;
+    }
+    
     /**
      * @return the weight
      */
